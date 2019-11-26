@@ -7,7 +7,7 @@ class TicketsContainer extends Component {
   state = { description: "", picture: "", price: "" };
   componentDidMount() {
     const { eventId } = this.props.match.params
-    console.log(eventId)
+
     this.props.getTickets(eventId);
   }
   onChange = event => {

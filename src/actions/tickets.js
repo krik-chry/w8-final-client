@@ -12,21 +12,17 @@ function allTickets(payload) {
   };
 }
 
-export const getTickets = (eventId) => (dispatch, getState) => {
+export const getTickets = (eventId) => (dispatch) => {
 
-  const state = getState();
-  const { tickets } = state;
 
-  if (!tickets.length) {
     request(`${baseUrl}/events/${eventId}/tickets`)
       .then(response => {
-
         const action = allTickets(response.body);
 
         dispatch(action);
       })
       .catch(console.error);
-  }
+  
 };
 
 function newTicket(payload) {

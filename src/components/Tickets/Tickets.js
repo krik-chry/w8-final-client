@@ -37,31 +37,35 @@ const tickets = props => {
           </label>
           <input type="submit" value="Add" />
         </form>
+        <h3>Tickets for this event</h3>
+        <p>Tickets available: {props.tickets.length}</p>
         {props.tickets.map(ticket => {
           return (
             <div key={ticket.id}>
               {/* <img src={ticket.picture} alt={ticket.id}/> */}
               <p>{ticket.description}</p>
               <p>Price: {ticket.price}</p>
-              <button><Link to={'/'}>Back to Events</Link></button>
             </div>
           );
         })}
+        <button><Link to={'/'}>Back to Events</Link></button>
       </div>
     );
   } else {
     return (
       <div>
+        <h3>Tickets for this event</h3>
+        <p>Tickets available: {props.tickets.length}</p>
         {props.tickets.map(ticket => {
           return (
             <div key={ticket.id}>
               {/* <img src={ticket.picture} alt={ticket.id}/> */}
               <p>{ticket.description}</p>
               <p>Price: {ticket.price}</p>
-              <button><Link to={'/'}>Back to Events</Link></button>
             </div>
           );
         })}
+        <button><Link to={'/'}>Back to Events</Link></button>
       </div>
     );
   }
