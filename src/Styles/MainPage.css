@@ -1,0 +1,17 @@
+.mp-text {
+  border: 2px solid red;
+  margin: 0 30%;
+  padding: 2%;
+}
+
+.mp-desc {
+  margin: 2% 25%;
+}
+
+.mp-title {
+  margin: 0 25%;
+}
+
+.mp-events {
+  text-decoration: underline;
+}

@@ -16,7 +16,7 @@ class SignupContainer extends Component {
   };
   onSubmit = event => {
     event.preventDefault();
-    console.log('onsubmitstate', this.state)
+
     this.props.createUser(this.state);
 
     if (
@@ -46,9 +46,9 @@ class SignupContainer extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { users: state.users };
-}
+const mapStateToProps = state => ({
+  users: state.users
+});
 
 const mapDispatchToProps = { getUsers, createUser };
 

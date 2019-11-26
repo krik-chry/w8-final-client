@@ -12,17 +12,14 @@ function allTickets(payload) {
   };
 }
 
-export const getTickets = (eventId) => (dispatch) => {
+export const getTickets = eventId => dispatch => {
+  request(`${baseUrl}/events/${eventId}/tickets`)
+    .then(response => {
+      const action = allTickets(response.body);
 
-
-    request(`${baseUrl}/events/${eventId}/tickets`)
-      .then(response => {
-        const action = allTickets(response.body);
-
-        dispatch(action);
-      })
-      .catch(console.error);
-  
+      dispatch(action);
+    })
+    .catch(console.error);
 };
 
 function newTicket(payload) {
@@ -33,14 +30,13 @@ function newTicket(payload) {
 }
 
 export const createTicket = (data, eventId) => (dispatch, getState) => {
-  const state = getState()
+  const state = getState();
   request
     .post(`${baseUrl}/events/${eventId}/ticket`)
     .set("Authorization", `Bearer ${state.loggedInUser.jwt}`)
     .send(data, eventId)
     .then(response => {
-      const ticket = response.body;
-      const action = newTicket(ticket);
+      const action = newTicket(response.body);
       dispatch(action);
     })
     .catch(console.error);

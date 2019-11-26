@@ -38,9 +38,9 @@ class TicketDetailsContainer extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { comments: state.comments };
-}
+const mapStateToProps = state => ({
+  comments: state.comments
+});
 
 const mapDispatchToProps = { getComments, createComment };
 

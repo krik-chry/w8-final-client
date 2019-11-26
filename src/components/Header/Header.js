@@ -1,35 +1,57 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import "../../Styles/Header.css";
 
 const Header = props => {
   if (props.loggedInUser.length === 0) {
     return (
-      <div>
-        <button className="backToWelcome">
-          <Link to={"/login"}>Login</Link>
-        </button>
-        <button className="backToWelcome">
-          <Link to={"/signup"}>Signup</Link>
-        </button>
+      <div className="header">
+        <img
+          className="header-img"
+          alt="ticket"
+          src="http://www.pngmart.com/files/6/Ticket-PNG-Photo.png"
+        />
+        <div className="header-title">TicketFinder</div>
+        <div className="header-buttons">
+          <button className="ls-button">
+            <Link className="ls-link" to={"/login"}>
+              Login
+            </Link>
+          </button>
+          <button className="ls-button">
+            <Link className="ls-link" to={"/signup"}>
+              Signup
+            </Link>
+          </button>
+        </div>
       </div>
     );
   } else {
     return (
-      <div>
-        <p>Logged in as:  {props.loggedInUser.username}</p>
-        <button onClick={() => props.onLogout()}>
-          <Link to="/">Logout</Link>
-        </button>
+      <div className="header">
+        <img
+          className="header-img"
+          alt="ticket"
+          src="http://www.pngmart.com/files/6/Ticket-PNG-Photo.png"
+        />
+        <div className="header-title">TicketFinder</div>
+
+        <div className="header-logged">
+          <p className="logged-in">👤 {props.loggedInUser.username}</p>
+          <button className="ls-button" onClick={() => props.onLogout()}>
+            <Link className="ls-link" to="/">
+              Logout
+            </Link>
+          </button>
+        </div>
       </div>
     );
   }
 };
 
-function mapStateToProps(state) {
-  return {
-    loggedInUser: state.loggedInUser
-  };
-}
+const mapStateToProps = state => ({
+  loggedInUser: state.loggedInUser
+});
 
 export default connect(mapStateToProps)(Header);

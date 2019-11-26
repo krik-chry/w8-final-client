@@ -1,36 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import "../../Styles/LoginSignup.css";
 
 const Login = props => {
   if (props.loggedInUser.length === 0) {
     return (
       <div>
         <h1 className="loginHeader">Login</h1>
-        <form onSubmit={props.onSubmit}>
-          <label>
+        <form className="ls-form" onSubmit={props.onSubmit}>
+          <label className="ls-label">
             E-mail:
             <input
+              className="ls-input"
               type="text"
               name="email"
               value={props.values.email}
               onChange={props.onChange}
             />
           </label>
-          <label>
+          <label className="ls-label">
             Password:
             <input
+              className="ls-input"
               type="password"
               name="password"
               value={props.values.password}
               onChange={props.onChange}
             />
           </label>
-          <input type="submit" value="Login" />
+          <input className="ls-input" type="submit" value="Login" />
         </form>
         {props.error.length > 0 && <p>{props.error}</p>}
-        <button className="backToWelcome">
-          <Link to={"/"}>Back to Welcome Page</Link>
+        <button className="ls-button">
+          <Link className="ls-link" to={"/"}>
+            Back to Main Page
+          </Link>
         </button>
       </div>
     );
@@ -38,19 +43,19 @@ const Login = props => {
     return (
       <div>
         <h2>Logged in successfully as {props.loggedInUser.username}</h2>
-        <button className="backToWelcome">
-          <Link to={"/"}>Back to Main Page</Link>
+        <button className="ls-button">
+          <Link className="ls-link" to={"/"}>
+            Back to Main Page
+          </Link>
         </button>
       </div>
     );
   }
 };
 
-function mapStateToProps(state) {
-  return {
-    error: state.error,
-    loggedInUser: state.loggedInUser
-  };
-}
+const mapStateToProps = state => ({
+  loggedInUser: state.loggedInUser,
+  error: state.error
+});
 
 export default connect(mapStateToProps)(Login);

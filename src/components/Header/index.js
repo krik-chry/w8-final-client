@@ -17,8 +17,9 @@ class HeaderContainer extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { loggedInUser: state.loggedInUser };
-}
+const mapStateToProps = state => ({
+  loggedInUser: state.loggedInUser
+});
+
 const mapDispatchToProps = { logout }
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer);

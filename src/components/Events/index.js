@@ -45,9 +45,9 @@ class EventsContainer extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { events: state.events };
-}
+const mapStateToProps = state => ({
+  events: state.events
+});
 
 const mapDispatchToProps = { getEvents, createEvent };
 

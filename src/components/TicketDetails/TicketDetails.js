@@ -24,7 +24,7 @@ const TicketDetails = props => {
           return (
             <div key={comment.id}>
               <p>
-                {/* {comment.user.username}  */}
+                {comment.user.username}
                 said: {comment.text}
               </p>
               {/* <button>
@@ -43,8 +43,8 @@ const TicketDetails = props => {
         {props.comments.map(comment => {
           return (
             <div key={comment.id}>
-              {/* {comment.user.username} */}
-               said: {comment.text}
+              {comment.user.username}
+              said: {comment.text}
               {/* <button>
                 <Link to={`/events/${comment.ticket.eventId}/tickets`}>
                   Back to all Tickets
@@ -58,11 +58,9 @@ const TicketDetails = props => {
   }
 };
 
-function mapStateToProps(state) {
-  return {
-    loggedInUser: state.loggedInUser,
-    comments: state.comments,
-  };
-}
+const mapStateToProps = state => ({
+  loggedInUser: state.loggedInUser,
+  comments: state.comments
+});
 
 export default connect(mapStateToProps)(TicketDetails);

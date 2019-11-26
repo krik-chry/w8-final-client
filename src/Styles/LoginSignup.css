@@ -1,0 +1,65 @@
+.ls-form {
+  margin: 2rem auto;
+  width: 50%;
+  min-width: 15rem;
+  padding: 1rem;
+  border: 5px solid #2191c5;
+  border-radius: 5px;
+  background: gray;
+}
+
+.ls-label {
+  display: inline-block;
+  width: 70%;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.ls-input {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-height: 2rem;
+  font-size: 1.2rem;
+  color: white;
+  background: #000000;
+  outline: none;
+}
+
+.ls-input[type="submit"] {
+  font-family: "Calistoga", sans-serif;
+  text-align: center;
+  width: 40%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-height: 2rem;
+  font-size: 1.2rem;
+  color: black;
+  background: #ff0101;
+  outline: none;
+}
+
+.ls-button {
+  padding: 0.5rem 1rem;
+  width: 100px;
+  font: inherit;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #2191c5;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  margin: 0 3px;
+}
+
+.ls-link  {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  padding-top: 10px;
+}

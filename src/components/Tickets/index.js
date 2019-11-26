@@ -6,7 +6,7 @@ import Tickets from "./Tickets";
 class TicketsContainer extends Component {
   state = { description: "", picture: "", price: "" };
   componentDidMount() {
-    const { eventId } = this.props.match.params
+    const { eventId } = this.props.match.params;
 
     this.props.getTickets(eventId);
   }
@@ -17,7 +17,7 @@ class TicketsContainer extends Component {
   };
   onSubmit = event => {
     event.preventDefault();
-    const { eventId } = this.props.match.params
+    const { eventId } = this.props.match.params;
     this.props.createTicket(this.state, eventId);
 
     if (
@@ -45,9 +45,9 @@ class TicketsContainer extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { tickets: state.tickets };
-}
+const mapStateToProps = state => ({
+  tickets: state.tickets
+});
 
 const mapDispatchToProps = { getTickets, createTicket };
 
