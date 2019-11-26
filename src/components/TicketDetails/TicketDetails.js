@@ -21,9 +21,20 @@ const TicketDetails = props => {
           <input type="submit" value="Add" />
         </form>
         {props.comments.map(comment => {
-          return <div key={comment.id}>{comment.text}</div>;
+          return (
+            <div key={comment.id}>
+              <p>
+                {/* {comment.user.username}  */}
+                said: {comment.text}
+              </p>
+              {/* <button>
+                <Link to={`/events/${comment.ticket.eventId}/tickets`}>
+                  Back to all Tickets
+                </Link>
+              </button> */}
+            </div>
+          );
         })}
-        <button><Link to={'/'}>Back to Event</Link></button>
       </div>
     );
   } else {
@@ -31,11 +42,17 @@ const TicketDetails = props => {
       <div>
         {props.comments.map(comment => {
           return (
-
-            <div key={comment.id}>{comment.text}</div>
-          )
+            <div key={comment.id}>
+              {/* {comment.user.username} */}
+               said: {comment.text}
+              {/* <button>
+                <Link to={`/events/${comment.ticket.eventId}/tickets`}>
+                  Back to all Tickets
+                </Link>
+              </button> */}
+            </div>
+          );
         })}
-        <button><Link to={'/'}>Back to Event</Link></button> 
       </div>
     );
   }
@@ -43,7 +60,8 @@ const TicketDetails = props => {
 
 function mapStateToProps(state) {
   return {
-    loggedInUser: state.loggedInUser
+    loggedInUser: state.loggedInUser,
+    comments: state.comments,
   };
 }
 
