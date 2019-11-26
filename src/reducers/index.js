@@ -4,11 +4,13 @@ import loggedInUser from './loggedInUser'
 import error from './error'
 import events from './events'
 import tickets from './tickets'
+import comments from './comments'
 
 export default combineReducers({
   users,
   error,
   loggedInUser,
   events,
-  tickets
+  tickets,
+  comments
 });

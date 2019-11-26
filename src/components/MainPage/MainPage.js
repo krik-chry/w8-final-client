@@ -3,11 +3,12 @@ import React from "react";
 import { connect } from "react-redux";
 import EventContainer from '../Events'
 
-const WelcomePage = props => {
+const MainPage = props => {
   if (props.loggedInUser.length === 0) {
     return (
       <div>
         <h1>Welcome to TicketFinder</h1>
+        <h3>Best place online to sell or buy tickets, for EVERY event.</h3>
         <p>
           Create a <b>new user account</b> for free or <b>login</b> if you are
           an existing user.<br></br>
@@ -21,6 +22,7 @@ const WelcomePage = props => {
     return (
       <div>
         <h1>Welcome to TicketFinder</h1>
+        <h3>Best place online to sell or buy tickets, for EVERY event.</h3>
         <h2>Events</h2>
         <EventContainer />
       </div>
@@ -33,4 +35,4 @@ function mapStateToProps(state) {
     loggedInUser: state.loggedInUser
   };
 }
-export default connect(mapStateToProps)(WelcomePage);
+export default connect(mapStateToProps)(MainPage);
