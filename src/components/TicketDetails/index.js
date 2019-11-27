@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getComments, createComment } from "../../actions/ticketDetails";
+import { ticketsList } from '../../actions/tickets'
 import TicketDetails from "./TicketDetails";
 
 class TicketDetailsContainer extends Component {
@@ -9,6 +10,7 @@ class TicketDetailsContainer extends Component {
     const { ticketId } = this.props.match.params;
 
     this.props.getComments(ticketId);
+    this.props.ticketsList()
   }
   onChange = event => {
     this.setState({
@@ -43,9 +45,10 @@ class TicketDetailsContainer extends Component {
 
 const mapStateToProps = state => ({
   comments: state.comments,
-  tickets: state.tickets
+  tickets: state.tickets,
+  allTickets: state.allTickets
 });
 
-const mapDispatchToProps = { getComments, createComment };
+const mapDispatchToProps = { getComments, createComment, ticketsList };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TicketDetailsContainer);

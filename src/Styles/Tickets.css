@@ -107,7 +107,9 @@ h1 {
 
 .details-cell {
   padding: 0;
-  margin: 12px;
+  margin: 8.5px 1px;
+  border-bottom: 1px solid white;
+  width: 99%;
 }
 
 .seller-title,
@@ -162,10 +164,10 @@ h1 {
   color: rgb(10, 39, 78);
 }
 
-.comment-section{
-  margin: 0 10% 0 10%;
-  width: 75%;
-  border: 2px solid gold;
+.comment-section {
+  margin: 0 30% 0 30%;
+  width: 40%;
+  border: 2px solid rgb(10, 39, 78);
   background: lightgray;
 }
 
@@ -178,12 +180,14 @@ h1 {
   width: 70%;
   padding: 0;
   margin: 15px;
+  margin-top: 0;
 }
 
 .comment-author {
   width: 30%;
   padding: 0;
   margin: 15px;
+  margin-top: 0;
 }
 
 .text-cell,
@@ -215,7 +219,7 @@ h1 {
   outline: none;
 }
 
-.comment-input[type='submit'] {
+.comment-input[type="submit"] {
   text-align: center;
   width: 10%;
   box-sizing: border-box;
@@ -226,4 +230,13 @@ h1 {
   color: white;
   background: #2191c5;
   outline: none;
+}
+
+.ticket-image {
+  width: 200px;
+  height: 200px;
+}
+
+h4 {
+  margin: 10px;
 }

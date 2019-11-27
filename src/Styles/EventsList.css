@@ -31,7 +31,7 @@
   min-height: 2rem;
   font-size: 16px;
   color: white;
-  background: #000000;
+  background: rgb(10, 39, 78);
   outline: none;
 }
 
@@ -45,7 +45,7 @@
   min-height: 2rem;
   font-size: 16px;
   color: white;
-  background: #000000;
+  background: rgb(10, 39, 78);
   outline: none;
 }
 
@@ -86,7 +86,7 @@
   flex-wrap: wrap;
 }
 .event {
-  border: 3px solid green;
+  border: 5px solid rgb(10, 39, 78);
   margin: 1%;
   padding: 5px;
   width: 30%;

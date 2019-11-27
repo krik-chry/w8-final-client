@@ -3,7 +3,7 @@
   margin-bottom: 20px;
   width: 100%;
   height: 50px;
-  background: rgb(160, 111, 64);
+  background: rgb(10, 39, 78);
 }
 
 .header-buttons {
@@ -16,6 +16,7 @@
   width: 5%;
   top:auto;
   left: 10px;
+  background: #2191c5;
 }
 .header-title {
   position: absolute;

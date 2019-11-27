@@ -2,6 +2,7 @@ import request from "superagent";
 
 export const ALL_TICKETS = "ALL_TICKETS";
 export const NEW_TICKET = "NEW_TICKET";
+export const FULL_TICKETS = "FULL_TICKETS"
 
 const baseUrl = "http://localhost:4000";
 
@@ -54,3 +55,20 @@ export const updateTicket = (data, ticketId) => (dispatch, getState) => {
     })
     .catch(console.error)
 }
+
+function fullTickets(payload) {
+  return {
+    type: FULL_TICKETS,
+    payload
+  };
+}
+
+export const ticketsList = () => dispatch => {
+  request(`${baseUrl}/ticketsList`)
+    .then(response => {
+      const action = fullTickets(response.body);
+
+      dispatch(action);
+    })
+    .catch(console.error);
+};

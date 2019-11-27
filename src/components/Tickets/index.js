@@ -26,13 +26,13 @@ class TicketsContainer extends Component {
       this.state.price !== ""
     ) {
       this.setState({
-        name: "",
         description: "",
         picture: "",
         price: ""
       });
     }
   };
+  
   render() {
     return (
       <Tickets

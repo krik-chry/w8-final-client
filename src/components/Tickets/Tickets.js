@@ -6,22 +6,23 @@ import "../../Styles/Tickets.css";
 const Tickets = props => {
   const { eventId } = props;
   const thisEvent = props.events.find(event => event.id == eventId);
+  
   return (
     <div>
       <h2>Tickets for {thisEvent.name}</h2>
-      <p>Tickets available: {props.tickets.length}</p>
+      <h3>Available: {props.tickets.length}</h3>
       <div className="ticket-table">
         <div className="ticket-seller">
           <p className="seller-title">Ticket Seller</p>
           {props.tickets.map(ticket => {
-            return <p className="seller-cell">{ticket.user.username}</p>;
+            return <p key={ticket.id} className="seller-cell">{ticket.user.username}</p>;
           })}
         </div>
         <div className="ticket-desc">
           <p className="desc-title">Description</p>
           {props.tickets.map(ticket => {
             return (
-              <div>
+              <div key={ticket.id}>
                 {ticket.description !== "" ? (
                   <p className="desc-cell">{ticket.description}</p>
                 ) : (
@@ -34,14 +35,14 @@ const Tickets = props => {
         <div className="ticket-price">
           <p className="price-title">Price</p>
           {props.tickets.map(ticket => {
-            return <p className="price-cell">{ticket.price} EUR</p>;
+            return <p key={ticket.id} className="price-cell">{ticket.price} EUR</p>;
           })}
         </div>
         <div className="ticket-details">
           <p className="details-title">Details</p>
           {props.tickets.map(ticket => {
             return (
-              <div className="details-cell">
+              <div key={ticket.id} className="details-cell">
                 <button className='more-button'>
                   <Link className='more-link' to={`/ticketDetails/${eventId}/${ticket.id}`}>
                     More
