@@ -40,13 +40,16 @@ class TicketsContainer extends Component {
         onChange={this.onChange}
         values={this.state}
         tickets={this.props.tickets}
+        eventId={this.props.match.params.eventId}
+        events={this.props.events}
       />
     );
   }
 }
 
 const mapStateToProps = state => ({
-  tickets: state.tickets
+  tickets: state.tickets,
+  events: state.events
 });
 
 const mapDispatchToProps = { getTickets, createTicket };

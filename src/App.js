@@ -7,6 +7,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Tickets from "./components/Tickets";
 import TicketDetails from "./components/TicketDetails";
+import EditTicket from "./components/EditTicket";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <Route path="/signup" component={Signup} />
       <Route path="/login" component={Login} />
       <Route path='/events/:eventId/tickets' component={Tickets} />
-      <Route path='/ticketDetails/:ticketId' component={TicketDetails} />
+      <Route path='/ticketDetails/:eventId/:ticketId' component={TicketDetails} />
+      <Route path='/edit/:ticketId' component={EditTicket} />
     </div>
   );
 }

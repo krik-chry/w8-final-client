@@ -41,3 +41,16 @@ export const createTicket = (data, eventId) => (dispatch, getState) => {
     })
     .catch(console.error);
 };
+
+export const updateTicket = (data, ticketId) => (dispatch, getState) => {
+  const state = getState()
+  request
+    .put(`${baseUrl}/edit/${ticketId}`)
+    .set("Authorization", `Bearer ${state.loggedInUser.jwt}`)
+    .send(data)
+    .then(response => {
+      const action = allTickets(response.body)
+      dispatch(action)
+    })
+    .catch(console.error)
+}
