@@ -1,0 +1,229 @@
+.ticket-form {
+  margin: 2rem auto;
+  width: 50%;
+  min-width: 15rem;
+  padding: 1rem;
+  border: 5px solid #2191c5;
+  border-radius: 5px;
+  background: gray;
+}
+
+form p {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: red;
+}
+
+.ticket-label {
+  display: inline-block;
+  width: 30%;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.ticket-input {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-height: 2rem;
+  font-size: 13px;
+  color: white;
+  background: #000000;
+  outline: none;
+}
+
+.ticket-input[type="submit"] {
+  font-family: "Calistoga", sans-serif;
+  text-align: center;
+  width: 10%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-height: 2rem;
+  font-size: 1.2rem;
+  color: black;
+  background: #ff0101;
+  outline: none;
+}
+
+.ticket-button {
+  padding: 0.5rem 1rem;
+  width: 100px;
+  font: inherit;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #2191c5;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  margin: 0 3px;
+}
+
+.ticket-link {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+.ticket-table {
+  display: inline-flex;
+  width: 75%;
+  margin: 0 10% 0 10%;
+}
+
+.ticket-details {
+  width: 10%;
+  display: inline-block;
+  border: 3px solid black;
+}
+
+.ticket-desc {
+  width: 50%;
+  border: 3px solid black;
+}
+
+.ticket-seller {
+  width: 25%;
+  border: 3px solid black;
+}
+
+.ticket-price {
+  width: 15%;
+  border: 3px solid black;
+}
+
+.seller-cell,
+.price-cell,
+.desc-cell {
+  border-bottom: 1px solid black;
+  padding: 0;
+  margin: 15px;
+}
+
+.details-cell {
+  padding: 0;
+  margin: 12px;
+}
+
+.seller-title,
+.desc-title,
+.details-title,
+.price-title {
+  border-bottom: 4px solid black;
+  margin: 10px 0 0 0;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  width: 100px;
+  font: inherit;
+  border-radius: 10px;
+  background-color: #9ca6aa;
+  cursor: pointer;
+  outline: none;
+  margin: 50px;
+}
+
+.edit-button {
+  padding: 0.5rem 1rem;
+  width: 100px;
+  font: inherit;
+  border-radius: 10px;
+  background-color: #9ca6aa;
+  cursor: pointer;
+  outline: none;
+  margin: 50px;
+}
+.back-link {
+  text-decoration: none;
+  color: rgb(10, 39, 78);
+}
+.edit-link {
+  text-decoration: none;
+  color: rgb(221, 20, 20);
+}
+
+.more-button {
+  font: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  background: #9ca6aa;
+}
+.more-link {
+  text-decoration: none;
+  color: rgb(10, 39, 78);
+}
+
+.comment-section{
+  margin: 0 10% 0 10%;
+  width: 75%;
+  border: 2px solid gold;
+  background: lightgray;
+}
+
+.comments-table {
+  display: inline-flex;
+  width: 100%;
+}
+
+.comment-text {
+  width: 70%;
+  padding: 0;
+  margin: 15px;
+}
+
+.comment-author {
+  width: 30%;
+  padding: 0;
+  margin: 15px;
+}
+
+.text-cell,
+.author-cell {
+  border-bottom: 1px solid black;
+  padding: 0;
+  margin: 15px;
+}
+
+.comment-form {
+  margin: 1rem auto;
+  width: 80%;
+  min-width: 15rem;
+  padding: 1rem;
+  border: 5px solid #2191c5;
+  border-radius: 5px;
+}
+
+.comment-input {
+  text-align: center;
+  width: 75%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-height: 2rem;
+  font-size: 13px;
+  color: black;
+  background: #2191c56b;
+  outline: none;
+}
+
+.comment-input[type='submit'] {
+  text-align: center;
+  width: 10%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  min-height: 2rem;
+  font-size: 13px;
+  color: white;
+  background: #2191c5;
+  outline: none;
+}

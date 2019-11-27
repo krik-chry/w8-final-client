@@ -12,7 +12,11 @@ const Header = props => {
           alt="ticket"
           src="http://www.pngmart.com/files/6/Ticket-PNG-Photo.png"
         />
-        <div className="header-title">TicketFinder</div>
+        <div className="header-title">
+          <Link className="ls-link" style={{ color: "yellow" }} to={"/"}>
+            TicketFinder
+          </Link>
+        </div>
         <div className="header-buttons">
           <button className="ls-button">
             <Link className="ls-link" to={"/login"}>
@@ -35,7 +39,11 @@ const Header = props => {
           alt="ticket"
           src="http://www.pngmart.com/files/6/Ticket-PNG-Photo.png"
         />
-        <div className="header-title">TicketFinder</div>
+        <div className="header-title">
+          <Link className="ls-link" style={{ color: "yellow" }} to={"/"}>
+            TicketFinder
+          </Link>
+        </div>
 
         <div className="header-logged">
           <p className="logged-in">👤 {props.loggedInUser.username}</p>

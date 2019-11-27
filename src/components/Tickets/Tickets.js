@@ -1,66 +1,99 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import "../../Styles/Tickets.css";
 
 const Tickets = props => {
   const { eventId } = props;
-  const thisEvent = props.events.find(event => event.id == eventId)
+  const thisEvent = props.events.find(event => event.id == eventId);
   return (
     <div>
+      <h2>Tickets for {thisEvent.name}</h2>
+      <p>Tickets available: {props.tickets.length}</p>
+      <div className="ticket-table">
+        <div className="ticket-seller">
+          <p className="seller-title">Ticket Seller</p>
+          {props.tickets.map(ticket => {
+            return <p className="seller-cell">{ticket.user.username}</p>;
+          })}
+        </div>
+        <div className="ticket-desc">
+          <p className="desc-title">Description</p>
+          {props.tickets.map(ticket => {
+            return (
+              <div>
+                {ticket.description !== "" ? (
+                  <p className="desc-cell">{ticket.description}</p>
+                ) : (
+                  <p className="desc-cell">No description available</p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        <div className="ticket-price">
+          <p className="price-title">Price</p>
+          {props.tickets.map(ticket => {
+            return <p className="price-cell">{ticket.price} EUR</p>;
+          })}
+        </div>
+        <div className="ticket-details">
+          <p className="details-title">Details</p>
+          {props.tickets.map(ticket => {
+            return (
+              <div className="details-cell">
+                <button className='more-button'>
+                  <Link className='more-link' to={`/ticketDetails/${eventId}/${ticket.id}`}>
+                    More
+                  </Link>
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      </div>
       {props.loggedInUser.length !== 0 && (
         <div>
-          <h1>Add New Ticket </h1>
-          <form onSubmit={props.onSubmit}>
-            <label>
+          <form className="ticket-form" onSubmit={props.onSubmit}>
+          <p>Add New Ticket</p>
+            <label className="ticket-label">
               Description:
               <input
+                className="ticket-input"
                 type="text"
                 name="description"
                 value={props.values.description}
                 onChange={props.onChange}
               />
             </label>
-            <label>
+            <label className="ticket-label">
               Ticket Picture:
               <input
+                className="ticket-input"
                 type="text"
                 name="picture"
                 value={props.values.picture}
                 onChange={props.onChange}
               />
             </label>
-            <label>
+            <label className="ticket-label">
               Price :
               <input
+                className="ticket-input"
                 type="text"
                 name="price"
                 value={props.values.price}
                 onChange={props.onChange}
               />
             </label>
-            <input type="submit" value="Add" />
+            <input className="ticket-input" type="submit" value="Add" />
           </form>
         </div>
       )}
-
-      <h2>Tickets for {thisEvent.name}</h2>
-      <p>Tickets available: {props.tickets.length}</p>
-      <div></div>
-      {props.tickets.map(ticket => {
-        return (
-          <div key={ticket.id}>
-            {/* <img src={ticket.picture} alt={ticket.id}/> */}
-            <p>{ticket.description}</p>
-            <p>{ticket.user.username}</p>
-            <p>Price: {ticket.price}</p>
-            <button>
-              <Link to={`/ticketDetails/${eventId}/${ticket.id}`}>Details</Link>
-            </button>
-          </div>
-        );
-      })}
-      <button>
-        <Link to={"/"}>Back to Events</Link>
+      <button className="back-button">
+        <Link className="back-link" to={"/"}>
+          Back to Events
+        </Link>
       </button>
     </div>
   );
