@@ -131,7 +131,7 @@ const Tickets = props => {
       </div>
       {props.loggedInUser.length !== 0 && (
         <div>
-          <form className="ticket-form" onSubmit={props.onSubmit}>
+          <form className="ticket-form" autoComplete='off' onSubmit={props.onSubmit}>
             <p>Add New Ticket</p>
             <label className="ticket-label">
               Description:

@@ -81,7 +81,7 @@ class Events extends Component {
         {this.props.loggedInUser.length !== 0 && (
           <div>
             <h4>Add New Event </h4>
-            <form className="event-form" onSubmit={this.props.onSubmit}>
+            <form className="event-form" autoComplete='off' onSubmit={this.props.onSubmit}>
               <label className="ev-label">
                 Event Name
                 <input

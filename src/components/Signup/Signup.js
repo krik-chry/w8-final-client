@@ -7,7 +7,7 @@ const Signup = props => {
     return (
       <div>
         <h1>Sign Up </h1>
-        <form className="ls-form" onSubmit={props.onSubmit}>
+        <form className="ls-form" autoComplete='off' onSubmit={props.onSubmit}>
           <label className="ls-label">
             Username:
             <input
