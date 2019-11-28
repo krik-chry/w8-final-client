@@ -9,6 +9,8 @@ const TicketDetails = props => {
   const allComments = props.comments;
   const thisTicket = props.tickets.find(ticket => ticket.id == ticketId);
 
+
+  //calculate ticket risk algorithm
   const calculateRisk = () => {
     let priceRisk = 0;
     let authorRisk = 0;
@@ -72,7 +74,6 @@ const TicketDetails = props => {
       return 95;
     } else return finalRisk;
   };
-
   return (
     <div>
       <h2>Ticket from {thisTicket.user.username}</h2>
