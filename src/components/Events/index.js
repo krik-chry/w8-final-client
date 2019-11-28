@@ -18,10 +18,10 @@ class EventsContainer extends Component {
     this.props.createEvent(this.state);
 
     if (
-      this.state.name !== "" &&
-      this.state.description !== "" &&
-      this.state.logo !== "" &&
-      this.state.startDate !== "" &&
+      this.state.name !== "" ||
+      this.state.description !== "" ||
+      this.state.logo !== "" ||
+      this.state.startDate !== "" ||
       this.state.endDate !== "" 
     ) {
       this.setState({
