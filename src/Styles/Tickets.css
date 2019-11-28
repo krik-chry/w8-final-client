@@ -113,7 +113,7 @@ h1 {
 .details-cell {
   padding: 0;
   margin: 8.5px 1px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid transparent;
   width: 99%;
 }
 
@@ -164,6 +164,7 @@ h1 {
   cursor: pointer;
   outline: none;
   background: #9ca6aa;
+  margin: 10px;
 }
 .more-link {
   text-decoration: none;
@@ -249,7 +250,8 @@ h1 {
 .ticket-image {
   width: 150px;
   height: 150px;
-  margin: 10px;
+  margin: 20px;
+  border-radius: 50%;
 }
 
 h4 {

@@ -104,11 +104,12 @@
 .event-logo {
   width: 200px;
   height: 200px;
+  border-radius: 20%;
 }
 .page-number {
   margin: 10px 5px;
   font-size: 24px;
-  width: 100px
+  width: 100px;
 }
 #page-numbers {
   list-style: none;
@@ -136,9 +137,6 @@
   font-size: 18px;
   border-radius: 10px;
 }
-/* #page-numbers > li:hover {
-  background: chartreuse; */
-/* } */
 
 #page-numbers > li:active {
   background: red;
