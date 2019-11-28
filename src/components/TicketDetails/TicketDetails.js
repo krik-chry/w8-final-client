@@ -27,7 +27,7 @@ const TicketDetails = props => {
         {ticketRisk <= 20 && (<h3 style={{ color: "green" }}>Risk:{ticketRisk} % VERY LOW</h3>)}
 
         <div className="info-wrapper">
-          <div>
+          <div className='image-section'>
             {thisTicket.picture !== "" ? (
               <img
                 className="ticket-image"
@@ -43,7 +43,7 @@ const TicketDetails = props => {
             )}
           </div>
 
-          <p>
+          <p className='desc-section'>
             {thisTicket.description !== ""
               ? thisTicket.description
               : "No description available"}

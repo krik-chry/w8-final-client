@@ -247,8 +247,12 @@ h4 {
   display: flex;    
 }
 
-.info-wrapper p{
-  margin: 20px;    
+.desc-section{
+  margin: 10px;
+  width: 60%;    
+}
+.image-section {
+  width: 60%
 }
 
 .ticket-section {
