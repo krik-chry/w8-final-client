@@ -1,18 +1,18 @@
-.ev-form {
+.event-form {
+  width: 80%;
   margin: 2rem auto;
-  width: 50%;
-  min-width: 15rem;
-  padding: 1rem;
-  border: 5px solid #2191c5;
+  border: 5px solid rgb(10, 39, 78);
   border-radius: 5px;
   background: gray;
 }
 
 .ev-label {
   display: inline-block;
-  width: 15%;
+  width: 24%;
+  margin-left: 10px;
   font-size: 16px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .ev-desc {
@@ -29,7 +29,7 @@
   border: 2px solid white;
   border-radius: 10px;
   min-height: 2rem;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   background: rgb(10, 39, 78);
   outline: none;
@@ -37,12 +37,12 @@
 
 .ev-desc-input {
   text-align: center;
-  width: 54%;
+  width: 85%;
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 10px;
   min-height: 2rem;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   background: rgb(10, 39, 78);
   outline: none;
