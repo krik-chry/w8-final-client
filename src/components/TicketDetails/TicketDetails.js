@@ -9,7 +9,6 @@ const TicketDetails = props => {
   const allComments = props.comments;
   const thisTicket = props.tickets.find(ticket => ticket.id == ticketId);
 
-
   //calculate ticket risk algorithm
   const calculateRisk = () => {
     let priceRisk = 0;
@@ -39,8 +38,11 @@ const TicketDetails = props => {
     }, 0);
 
     //calculate difference
-    const percentageDifference = 100 * ( ( Number(thisTicket.price) - ticketsAveragePrice)  / ((Number(thisTicket.price) + ticketsAveragePrice ) / 2)    ) 
-      
+    const percentageDifference =
+      100 *
+      ((Number(thisTicket.price) - ticketsAveragePrice) /
+        ((Number(thisTicket.price) + ticketsAveragePrice) / 2));
+
     //check for difference
     if (percentageDifference > 10) {
       priceRisk -= 10;
@@ -76,64 +78,76 @@ const TicketDetails = props => {
   };
   return (
     <div>
-      <h2>Ticket from {thisTicket.user.username}</h2>
-      <h2>Price: {thisTicket.price} EUR</h2>
-      {calculateRisk() > 80 && (
-        <h3 style={{ color: "red" }}>
-          Risk: {calculateRisk().toFixed(1)} % VERY HIGH 
-        </h3>
-      )}
-      {calculateRisk() > 60 && calculateRisk() <= 80 && (
-        <h3 style={{ color: "orange" }}>
-          Risk: {calculateRisk().toFixed(1)} % HIGH
-        </h3>
-      )}
-      {calculateRisk() > 40 && calculateRisk() <= 60 && (
-        <h3 style={{ color: "yellow" }}>
-          Risk: {calculateRisk().toFixed(1)} % MODERATE
-        </h3>
-      )}
-      {calculateRisk() > 20 && calculateRisk() <= 40 && (
-        <h3 style={{ color: "lightgreen" }}>
-          Risk: {calculateRisk().toFixed(1)} % LOW
-        </h3>
-      )}
-      {calculateRisk() <= 20 && (
-        <h3 style={{ color: "green" }}>
-          Risk: {calculateRisk().toFixed(1)} % VERY LOW
-        </h3>
-      )}
+      <div className="ticket-section">
+        <h2>Ticket from {thisTicket.user.username}</h2>
+        <h2>Price: {thisTicket.price} EUR</h2>
+        {calculateRisk() > 80 && (
+          <h3 style={{ color: "red" }}>
+            Risk: {calculateRisk().toFixed(1)} % VERY HIGH
+          </h3>
+        )}
+        {calculateRisk() > 60 && calculateRisk() <= 80 && (
+          <h3 style={{ color: "orange" }}>
+            Risk: {calculateRisk().toFixed(1)} % HIGH
+          </h3>
+        )}
+        {calculateRisk() > 40 && calculateRisk() <= 60 && (
+          <h3 style={{ color: "yellow" }}>
+            Risk: {calculateRisk().toFixed(1)} % MODERATE
+          </h3>
+        )}
+        {calculateRisk() > 20 && calculateRisk() <= 40 && (
+          <h3 style={{ color: "lightgreen" }}>
+            Risk: {calculateRisk().toFixed(1)} % LOW
+          </h3>
+        )}
+        {calculateRisk() <= 20 && (
+          <h3 style={{ color: "green" }}>
+            Risk: {calculateRisk().toFixed(1)} % VERY LOW
+          </h3>
+        )}
 
-      {thisTicket.picture !== "" ? (
-        <img
-          className="ticket-image"
-          src={thisTicket.picture}
-          alt={thisTicket.description}
-        />
-      ) : (
-        <img
-          className="ticket-image"
-          src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
-          alt="not available"
-        />
-      )}
+        <div className="info-wrapper">
+          <div>
+            {thisTicket.picture !== "" ? (
+              <img
+                className="ticket-image"
+                src={thisTicket.picture}
+                alt={thisTicket.picture}
+              />
+            ) : (
+              <img
+                className="ticket-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+                alt="not available"
+              />
+            )}
+          </div>
+
+          <p>
+            {thisTicket.description !== ""
+              ? thisTicket.description
+              : "No description available"}
+          </p>
+        </div>
+      </div>
       <div className="comment-section">
         <h4>Comments for this ticket</h4>
         <div className="comments-table">
+          <div className="comment-author">
+            {props.comments.map(comment => {
+              return (
+                <p className="author-cell" key={comment.id}>
+                  {comment.user.username}
+                </p>
+              );
+            })}
+          </div>
           <div className="comment-text">
             {props.comments.map(comment => {
               return (
                 <p className="text-cell" key={comment.id}>
                   {comment.text}
-                </p>
-              );
-            })}
-          </div>
-          <div className="comment-author">
-            {props.comments.map(comment => {
-              return (
-                <p className="author-cell" key={comment.id}>
-                  by: {comment.user.username}
                 </p>
               );
             })}

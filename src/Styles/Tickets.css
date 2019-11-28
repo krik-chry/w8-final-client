@@ -79,28 +79,28 @@ h1 {
 .ticket-details {
   width: 10%;
   display: inline-block;
-  border: 3px solid black;
+  border: 3px solid  rgb(10, 39, 78);
 }
 
 .ticket-desc {
   width: 50%;
-  border: 3px solid black;
+  border: 3px solid  rgb(10, 39, 78);
 }
 
 .ticket-seller {
   width: 25%;
-  border: 3px solid black;
+  border: 3px solid  rgb(10, 39, 78);
 }
 
 .ticket-price {
   width: 15%;
-  border: 3px solid black;
+  border: 3px solid  rgb(10, 39, 78);
 }
 
 .seller-cell,
 .price-cell,
 .desc-cell {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid  rgb(10, 39, 78);
   padding: 0;
   margin: 15px;
 }
@@ -116,7 +116,7 @@ h1 {
 .desc-title,
 .details-title,
 .price-title {
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid  rgb(10, 39, 78);
   margin: 10px 0 0 0;
   padding-bottom: 10px;
   font-size: 20px;
@@ -169,6 +169,7 @@ h1 {
   width: 40%;
   border: 2px solid rgb(10, 39, 78);
   background: lightgray;
+  border-radius: 30px;
 }
 
 .comments-table {
@@ -179,22 +180,22 @@ h1 {
 .comment-text {
   width: 70%;
   padding: 0;
-  margin: 15px;
+  margin: 5px;
   margin-top: 0;
 }
 
 .comment-author {
   width: 30%;
   padding: 0;
-  margin: 15px;
+  margin: 5px;
   margin-top: 0;
 }
 
 .text-cell,
 .author-cell {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid  rgb(10, 39, 78);
   padding: 0;
-  margin: 15px;
+  margin: 5px 0 7px 0px;
 }
 
 .comment-form {
@@ -233,10 +234,26 @@ h1 {
 }
 
 .ticket-image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
 }
 
 h4 {
   margin: 10px;
+}
+
+.info-wrapper {
+  display: flex;    
+}
+
+.info-wrapper p{
+  margin: 20px;    
+}
+
+.ticket-section {
+  border: 2px solid rgb(10, 39, 78);
+    border-radius: 30px;
+    margin: 0 30% 2% 30%;
+    width: 40%;
 }

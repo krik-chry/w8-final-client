@@ -45,11 +45,11 @@ class Events extends Component {
           )}
           <div className="dates">
             <p className="start-date">
-              Starts on: {event.startDate.slice(0, 10)} at{" "}
+              Starts on: {event.startDate.slice(0, 10)} at
               {event.startDate.slice(-13, -8)} UTC
             </p>
             <p className="end-date">
-              Ends on: {event.endDate.slice(0, 10)} at{" "}
+              Ends on: {event.endDate.slice(0, 10)} at
               {event.endDate.slice(-13, -8)} UTC
             </p>
           </div>
@@ -85,7 +85,7 @@ class Events extends Component {
             <h4>Add New Event </h4>
             <form className="event-form" onSubmit={this.props.onSubmit}>
               <label className="ev-label">
-                Event Name:
+                Event Name
                 <input
                   className="ev-input"
                   type="text"
@@ -96,7 +96,7 @@ class Events extends Component {
               </label>
 
               <label className="ev-label">
-                Event Logo:
+                Event Logo
                 <input
                   className="ev-input"
                   type="text"
@@ -106,7 +106,7 @@ class Events extends Component {
                 />
               </label>
               <label className="ev-label">
-                Starts on:
+                Starts on
                 <input
                   className="ev-input"
                   type="datetime-local"
@@ -116,7 +116,7 @@ class Events extends Component {
                 />
               </label>
               <label className="ev-label">
-                Ends on:
+                Ends on
                 <input
                   className="ev-input"
                   type="datetime-local"
@@ -126,7 +126,7 @@ class Events extends Component {
                 />
               </label>
               <label className="ev-desc">
-                Description:
+                Description {" "}
                 <input
                   className="ev-desc-input"
                   type="text"
