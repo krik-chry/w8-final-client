@@ -3,7 +3,7 @@
   width: 50%;
   min-width: 15rem;
   padding: 1rem;
-  border: 5px solid #2191c5;
+  border: 5px solid  rgb(10, 39, 78);
   border-radius: 5px;
   background: gray;
 }
@@ -30,7 +30,7 @@ form p {
   min-height: 2rem;
   font-size: 13px;
   color: white;
-  background: #000000;
+  background:  rgb(10, 39, 78);
   outline: none;
 }
 
