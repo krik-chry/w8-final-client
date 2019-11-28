@@ -35,7 +35,6 @@
   outline: none;
 }
 
-
 .ev-desc-input {
   text-align: center;
   width: 54%;
@@ -76,7 +75,7 @@
   margin: 0 3px;
 }
 
-.ev-link  {
+.ev-link {
   text-decoration: none;
   color: white;
 }
@@ -95,14 +94,50 @@
   display: inline-flex;
 }
 .start-date {
-  margin: 15px 70px 15px 0px
+  margin: 15px 70px 15px 0px;
 }
 .end-date {
-  margin: 15px 0px 15px 70px
-
+  margin: 15px 0px 15px 70px;
 }
 
 .event-logo {
   width: 200px;
   height: 200px;
+}
+.page-number {
+  margin: 10px 5px;
+  font-size: 24px;
+  width: 100px
+}
+#page-numbers {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.page-numbers {
+  border: 2px solid rgb(10, 39, 78);
+  background: lightgray;
+  margin: 0 35% 0 35%;
+  width: 30%;
+  display: flex;
+}
+
+#page-numbers > li {
+  text-align: center;
+  margin: 0.3em 5px 0.3em 0.3em;
+  color: black;
+  cursor: pointer;
+  border: 3px solid rgb(10, 39, 78);
+  padding: 6px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+/* #page-numbers > li:hover {
+  background: chartreuse; */
+/* } */
+
+#page-numbers > li:active {
+  background: red;
 }
