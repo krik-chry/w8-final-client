@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getTickets, createTicket } from "../../actions/tickets";
+import { getTickets, createTicket, ticketsList } from "../../actions/tickets";
+import { commentsList } from '../../actions/ticketDetails'
 import Tickets from "./Tickets";
 
 class TicketsContainer extends Component {
-  state = { description: "", picture: "", price: "" };
+  state = { description: "", picture: "", price: "" }
   componentDidMount() {
     const { eventId } = this.props.match.params;
 
     this.props.getTickets(eventId);
+    this.props.ticketsList()
+    this.props.commentsList()
   }
   onChange = event => {
     this.setState({
@@ -21,8 +24,8 @@ class TicketsContainer extends Component {
     this.props.createTicket(this.state, eventId);
 
     if (
-      this.state.description !== "" &&
-      this.state.picture !== "" &&
+      this.state.description !== "" ||
+      this.state.picture !== "" ||
       this.state.price !== ""
     ) {
       this.setState({
@@ -42,6 +45,8 @@ class TicketsContainer extends Component {
         tickets={this.props.tickets}
         eventId={this.props.match.params.eventId}
         events={this.props.events}
+        allComments={this.props.allComments}
+        allTickets={this.props.allTickets}
       />
     );
   }
@@ -49,9 +54,11 @@ class TicketsContainer extends Component {
 
 const mapStateToProps = state => ({
   tickets: state.tickets,
-  events: state.events
+  events: state.events,
+  allComments: state.allComments,
+  allTickets: state.allTickets
 });
 
-const mapDispatchToProps = { getTickets, createTicket };
+const mapDispatchToProps = { getTickets, createTicket, ticketsList, commentsList };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TicketsContainer);

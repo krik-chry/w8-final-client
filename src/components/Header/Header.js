@@ -46,7 +46,7 @@ const Header = props => {
         </div>
 
         <div className="header-logged">
-          <p className="logged-in">👤 {props.loggedInUser.username}</p>
+          <p className="logged-in"><span role="img" aria-label="user">👤</span> {props.loggedInUser.username}</p>
           <button className="ls-button" onClick={() => props.onLogout()}>
             <Link className="ls-link" to="/">
               Logout

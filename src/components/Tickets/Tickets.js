@@ -2,11 +2,18 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "../../Styles/Tickets.css";
+import { calculateRisk } from "../../riskAlgorithm";
 
 const Tickets = props => {
   const { eventId } = props;
   const thisEvent = props.events.find(event => event.id == eventId);
-  
+  const allTickets = props.allTickets
+  const tickets = props.tickets
+  const findTicketComments = (idOfTicket) => {
+    const ticketComments = props.allComments.filter(comment => comment.ticketId === idOfTicket)
+    return ticketComments
+  }
+
   return (
     <div>
       <h2>Tickets for {thisEvent.name}</h2>
@@ -36,6 +43,19 @@ const Tickets = props => {
           <p className="price-title">Price</p>
           {props.tickets.map(ticket => {
             return <p key={ticket.id} className="price-cell">{ticket.price} EUR</p>;
+          })}
+        </div>
+        <div className="ticket-risk">
+          <p className="risk-title">Risk</p>
+          {props.tickets.map(ticket => {
+            const ticketRisk = calculateRisk(allTickets, findTicketComments(ticket.id), ticket, tickets)
+            return <div key={ticket.id} className="risk-cell">
+              {ticketRisk > 80 && <div className='risk-5'></div>}
+              {ticketRisk > 60 && ticketRisk <= 80 && <div className='risk-4'></div>}
+              {ticketRisk > 40 && ticketRisk <= 60 && <div className='risk-3'></div>}
+              {ticketRisk > 20 && ticketRisk <= 40 && <div className='risk-2'></div>}
+              {ticketRisk <= 20 && <div className='risk-1'></div>}
+              </div>
           })}
         </div>
         <div className="ticket-details">

@@ -2,6 +2,7 @@ import request from "superagent";
 
 export const ALL_COMMENTS = "ALL_COMMENTS";
 export const NEW_COMMENT = "NEW_COMMENT";
+export const FULL_COMMENTS = "FULL_COMMENTS"
 
 const baseUrl = "http://localhost:4000";
 
@@ -41,6 +42,23 @@ export const createComment = (data, ticketId) => (dispatch, getState) => {
     .then(response => {
       const comment = response.body;
       const action = newComment(comment);
+      dispatch(action);
+    })
+    .catch(console.error);
+};
+
+function fullComments(payload) {
+  return {
+    type: FULL_COMMENTS,
+    payload
+  };
+}
+
+export const commentsList = () => dispatch => {
+  request(`${baseUrl}/commentsList`)
+    .then(response => {
+      const action = fullComments(response.body);
+
       dispatch(action);
     })
     .catch(console.error);

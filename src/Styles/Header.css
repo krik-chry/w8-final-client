@@ -13,14 +13,14 @@
 }
 
 .header-img{
-  width: 5%;
+  width: 10%;
   top:auto;
   left: 10px;
   background: #2191c5;
 }
 .header-title {
   position: absolute;
-  left: 80px;
+  left: 180px;
   top: auto;
   font-size: 40px;
   color: yellow;
