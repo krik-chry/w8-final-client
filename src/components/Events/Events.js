@@ -45,12 +45,10 @@ class Events extends Component {
           )}
           <div className="dates">
             <p className="start-date">
-              Starts on: {event.startDate.slice(0, 10)} at
-              {event.startDate.slice(-13, -8)} UTC
+              Starts on: {event.startDate.slice(0, 10)} at {event.startDate.slice(-13, -8)} UTC
             </p>
             <p className="end-date">
-              Ends on: {event.endDate.slice(0, 10)} at
-              {event.endDate.slice(-13, -8)} UTC
+              Ends on: {event.endDate.slice(0, 10)} at {event.endDate.slice(-13, -8)} UTC
             </p>
           </div>
           <div className="event-button">

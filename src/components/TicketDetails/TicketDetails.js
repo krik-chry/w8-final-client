@@ -20,14 +20,24 @@ const TicketDetails = props => {
       <div className="ticket-section">
         <h2>Ticket from {thisTicket.user.username}</h2>
         <h2>Price: {thisTicket.price} EUR</h2>
-        {ticketRisk > 80 && (<h3 style={{ color: "red" }}>Risk: {ticketRisk} % VERY HIGH</h3>)}
-        {ticketRisk > 60 && ticketRisk <= 80 && (<h3 style={{ color: "orange" }}>Risk: {ticketRisk} % HIGH</h3>)}
-        {ticketRisk > 40 && ticketRisk <= 60 && (<h3 style={{ color: "yellow" }}>Risk: {ticketRisk} % MODERATE</h3>)}
-        {ticketRisk > 20 && ticketRisk <= 40 && (<h3 style={{ color: "lightgreen" }}>Risk:{ticketRisk} % LOW</h3>)}
-        {ticketRisk <= 20 && (<h3 style={{ color: "green" }}>Risk:{ticketRisk} % VERY LOW</h3>)}
+        {ticketRisk > 80 && (
+          <h3 style={{ color: "red" }}>Risk: {ticketRisk} % VERY HIGH</h3>
+        )}
+        {ticketRisk > 60 && ticketRisk <= 80 && (
+          <h3 style={{ color: "orange" }}>Risk: {ticketRisk} % HIGH</h3>
+        )}
+        {ticketRisk > 40 && ticketRisk <= 60 && (
+          <h3 style={{ color: "yellow" }}>Risk: {ticketRisk} % MODERATE</h3>
+        )}
+        {ticketRisk > 20 && ticketRisk <= 40 && (
+          <h3 style={{ color: "lightgreen" }}>Risk: {ticketRisk} % LOW</h3>
+        )}
+        {ticketRisk <= 20 && (
+          <h3 style={{ color: "green" }}>Risk: {ticketRisk} % VERY LOW</h3>
+        )}
 
         <div className="info-wrapper">
-          <div>
+          <div className="image-section">
             {thisTicket.picture !== "" ? (
               <img
                 className="ticket-image"
@@ -43,11 +53,14 @@ const TicketDetails = props => {
             )}
           </div>
 
-          <p>
+          <div className="desc-section">
+            <p>
+              <u>Ticket Description</u>
+            </p>
             {thisTicket.description !== ""
               ? thisTicket.description
               : "No description available"}
-          </p>
+          </div>
         </div>
       </div>
       <div className="comment-section">
