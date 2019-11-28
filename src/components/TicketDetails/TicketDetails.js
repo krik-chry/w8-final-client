@@ -54,9 +54,9 @@ const TicketDetails = props => {
           </div>
 
           <div className="desc-section">
-            <p>
-              <u>Ticket Description</u>
-            </p>
+            <h4>
+              <u>Description</u>
+            </h4>
             {thisTicket.description !== ""
               ? thisTicket.description
               : "No description available"}
@@ -88,8 +88,8 @@ const TicketDetails = props => {
         {props.loggedInUser.length !== 0 && (
           <div>
             <form className="comment-form" onSubmit={props.onSubmit}>
-              Your comment:
               <label className="comment-label">
+              Your comment:
                 <input
                   className="comment-input"
                   type="text"
