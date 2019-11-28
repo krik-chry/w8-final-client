@@ -3,7 +3,7 @@
   width: 50%;
   min-width: 15rem;
   padding: 1rem;
-  border: 5px solid  rgb(10, 39, 78);
+  border: 5px solid rgb(10, 39, 78);
   border-radius: 5px;
   background: gray;
 }
@@ -30,7 +30,7 @@ form p {
   min-height: 2rem;
   font-size: 13px;
   color: white;
-  background:  rgb(10, 39, 78);
+  background: rgb(10, 39, 78);
   outline: none;
 }
 
@@ -79,34 +79,33 @@ h1 {
 .ticket-details {
   width: 10%;
   display: inline-block;
-  border: 3px solid  rgb(10, 39, 78);
+  border: 3px solid rgb(10, 39, 78);
 }
 
 .ticket-desc {
   width: 50%;
-  border: 3px solid  rgb(10, 39, 78);
+  border: 3px solid rgb(10, 39, 78);
 }
 
 .ticket-seller {
   width: 25%;
-  border: 3px solid  rgb(10, 39, 78);
+  border: 3px solid rgb(10, 39, 78);
 }
 
-.ticket-price
-{
+.ticket-price {
   width: 15%;
-  border: 3px solid  rgb(10, 39, 78);
+  border: 3px solid rgb(10, 39, 78);
 }
 
 .ticket-risk {
   width: 4%;
-  border: 3px solid  rgb(10, 39, 78);
+  border: 3px solid rgb(10, 39, 78);
 }
 
 .seller-cell,
 .price-cell,
 .desc-cell {
-  border-bottom: 1px solid  rgb(10, 39, 78);
+  border-bottom: 1px solid rgb(10, 39, 78);
   padding: 0;
   margin: 15px;
 }
@@ -123,7 +122,7 @@ h1 {
 .details-title,
 .price-title,
 .risk-title {
-  border-bottom: 4px solid  rgb(10, 39, 78);
+  border-bottom: 4px solid rgb(10, 39, 78);
   margin: 10px 0 0 0;
   padding-bottom: 10px;
   font-size: 20px;
@@ -200,31 +199,37 @@ h1 {
 
 .text-cell,
 .author-cell {
-  border-bottom: 1px solid  rgb(10, 39, 78);
+  border-bottom: 1px solid rgb(10, 39, 78);
   padding: 0;
   margin: 5px 0 7px 0px;
 }
 
 .comment-form {
   margin: 1rem auto;
-  width: 80%;
+  width: 95%;
   min-width: 15rem;
-  padding: 1rem;
-  border: 5px solid #2191c5;
-  border-radius: 5px;
+  border: 5px solid rgb(10, 39, 78);
+  border-radius: 40px;
+  background: gray;
+}
+.comment-label {
+  margin: 5px 0;
+  font-size: 20px;
+  color: red;
 }
 
 .comment-input {
   text-align: center;
-  width: 75%;
+  width: 95%;
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 10px;
   min-height: 2rem;
   font-size: 13px;
-  color: black;
-  background: #2191c56b;
+  color: white;
+  background: rgb(10, 39, 78);
   outline: none;
+  margin: 5px 0;
 }
 
 .comment-input[type="submit"] {
@@ -234,10 +239,11 @@ h1 {
   border: 2px solid white;
   border-radius: 10px;
   min-height: 2rem;
-  font-size: 13px;
+  font-size: 15px;
   color: white;
-  background: #2191c5;
+  background: red;
   outline: none;
+  margin: 5px 0;
 }
 
 .ticket-image {
@@ -251,22 +257,24 @@ h4 {
 }
 
 .info-wrapper {
-  display: flex;    
+  display: flex;
 }
 
-.desc-section{
+.desc-section {
   margin: 10px;
-  width: 60%;    
+  width: 60%;
 }
 .image-section {
-  width: 60%
+  width: 60%;
 }
 
 .ticket-section {
-  border: 2px solid rgb(10, 39, 78);
-    border-radius: 30px;
-    margin: 0 30% 2% 30%;
-    width: 40%;
+  border: 2px solid #2191c5;
+  border-radius: 30px;
+  margin: 0 30% 2% 30%;
+  width: 40%;
+  background: rgb(10, 39, 78);
+  color: white;
 }
 
 .risk-1 {
