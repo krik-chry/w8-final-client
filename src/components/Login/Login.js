@@ -8,7 +8,7 @@ const Login = props => {
     return (
       <div>
         <h1 className="loginHeader">Login</h1>
-        <form className="ls-form" onSubmit={props.onSubmit}>
+        <form className="ls-form" autoComplete='off' onSubmit={props.onSubmit}>
           <label className="ls-label">
             E-mail:
             <input

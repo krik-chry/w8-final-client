@@ -87,7 +87,7 @@ const TicketDetails = props => {
         </div>
         {props.loggedInUser.length !== 0 && (
           <div>
-            <form className="comment-form" onSubmit={props.onSubmit}>
+            <form className="comment-form" autoComplete='off' onSubmit={props.onSubmit}>
               <label className="comment-label">
               Your comment:
                 <input

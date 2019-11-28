@@ -12,7 +12,7 @@ const EditTicket = props => {
       {thisTicket.userId === props.loggedInUser.id && (
         <div>
           <h1 className="loginHeader">Edit</h1>
-          <form className="ls-form" onSubmit={props.onSubmit}>
+          <form className="ls-form" autoComplete='off' onSubmit={props.onSubmit}>
             <label className="ls-label">
               Description:
               <input
