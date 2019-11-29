@@ -1,7 +1,8 @@
 .mp-text {
   border: 2px solid red;
+  border-radius: 20px;
   margin: 0 30%;
-  padding: 0 2%;
+  padding: 1% 2%;
 }
 
 .mp-desc {
