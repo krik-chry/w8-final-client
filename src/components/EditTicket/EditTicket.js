@@ -54,7 +54,7 @@ const EditTicket = props => {
       )}
       {thisTicket.userId !== props.loggedInUser.id && (
         <div>
-          <p>Only the author of this ticket can edit it.</p>
+          <h3>Only the author of this ticket can edit it.</h3>
           <button className="ls-button">
             <Link className="ls-link" to={`/ticketDetails/${eventId}/${ticketId}`}>
               Back to tickets
