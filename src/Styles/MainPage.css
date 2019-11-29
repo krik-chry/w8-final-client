@@ -22,12 +22,21 @@
   border-radius: 10px;
   cursor: pointer;
   outline: none;
-  background: #9ca6aa;
+  background: rgb(10, 39, 78);
+  margin: 10px;
+}
+
+.event-more-button:hover {
+  font: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  background: #2191c5;
   margin: 10px;
 }
 
 .event-more-link {
   text-decoration: none;
-  color: rgb(10, 39, 78);
+  color: white;
   font-size: 18px;
 }

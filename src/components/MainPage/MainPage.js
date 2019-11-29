@@ -9,7 +9,7 @@ const MainPage = props => {
       <div>
         <h1 className="mp-title">Welcome to TicketFinder</h1>
         <h3 className="mp-desc">
-          Best place online to sell or buy tickets, for EVERY event.
+          Best place online to sell or buy tickets, for EVERY event !
         </h3>
         {props.loggedInUser.length === 0 && <p className="mp-text">
           Create a <b>new user account</b> for free or <b>login</b> if you are
