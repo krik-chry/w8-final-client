@@ -18,6 +18,7 @@ function allUsers(payload) {
 export const getUsers = () => (dispatch, getState) => {
   const state = getState();
   const { users } = state;
+  
   if (!users.length) {
     request(`${baseUrl}/users`)
       .then(response => {

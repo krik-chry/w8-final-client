@@ -15,6 +15,7 @@ function allEvents(payload) {
 export const getEvents = () => (dispatch, getState) => {
   const state = getState();
   const { events } = state;
+  
   if (!events.length) {
     request(`${baseUrl}/events`)
       .then(response => {

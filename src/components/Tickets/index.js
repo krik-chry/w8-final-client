@@ -13,11 +13,13 @@ class TicketsContainer extends Component {
     this.props.ticketsList()
     this.props.commentsList()
   }
+  
   onChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
+
   onSubmit = event => {
     event.preventDefault();
     const { eventId } = this.props.match.params;

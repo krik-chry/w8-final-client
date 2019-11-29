@@ -6,14 +6,17 @@ import { Redirect } from "react-router-dom";
 
 class SignupContainer extends Component {
   state = { username: "", email: "", password: "", redirect: false };
+  
   componentDidMount() {
     this.props.getUsers();
-  }
+  };
+
   onChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
+
   onSubmit = event => {
     event.preventDefault();
 
@@ -32,6 +35,7 @@ class SignupContainer extends Component {
       });
     }
   };
+  
   render() {
     if (this.state.redirect) {
       return <Redirect to="/login" />;

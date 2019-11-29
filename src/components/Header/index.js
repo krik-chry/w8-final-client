@@ -6,7 +6,8 @@ import Header from './Header'
 class HeaderContainer extends Component {
   onLogout = () => {
     this.props.logout()
-  }
+  };
+  
   render() {
     return (
       <Header

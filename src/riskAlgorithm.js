@@ -3,6 +3,7 @@ export const calculateRisk = (allTickets, allComments, thisTicket, tickets) => {
   let authorRisk = 0;
   let hourRisk = 0;
   let commentsRisk = 0;
+
   //calculate number of author's tickets
   const ticketsByAuthor = allTickets.filter(
     ticket => ticket.userId == thisTicket.userId
@@ -16,6 +17,7 @@ export const calculateRisk = (allTickets, allComments, thisTicket, tickets) => {
   const filterAuthorComments = allComments.filter(
     comment => comment.userId !== thisTicket.userId
   );
+  
   const commentsNumber = filterAuthorComments.length;
 
   //calculate ticket avg price

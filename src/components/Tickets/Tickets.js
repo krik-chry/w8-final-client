@@ -10,6 +10,7 @@ const Tickets = props => {
   const thisEvent = props.events.find(event => event.id == eventId);
   const allTickets = props.allTickets;
   const tickets = props.tickets;
+  
   const findTicketComments = idOfTicket => {
     const ticketComments = props.allComments.filter(
       comment => comment.ticketId === idOfTicket

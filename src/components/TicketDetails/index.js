@@ -6,17 +6,20 @@ import TicketDetails from "./TicketDetails";
 
 class TicketDetailsContainer extends Component {
   state = { text: "" };
+
   componentDidMount() {
     const { ticketId } = this.props.match.params;
 
     this.props.getComments(ticketId);
     this.props.ticketsList()
-  }
+  };
+
   onChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
+
   onSubmit = event => {
     event.preventDefault();
     const { ticketId } = this.props.match.params;
@@ -28,6 +31,7 @@ class TicketDetailsContainer extends Component {
       });
     }
   };
+  
   render() {
     return (
       <TicketDetails

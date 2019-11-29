@@ -149,10 +149,12 @@ h1 {
   outline: none;
   margin: 50px;
 }
+
 .back-link {
   text-decoration: none;
   color: rgb(10, 39, 78);
 }
+
 .edit-link {
   text-decoration: none;
   color: rgb(221, 20, 20);
@@ -164,8 +166,8 @@ h1 {
   cursor: pointer;
   outline: none;
   background: #9ca6aa;
-  margin: 10px;
 }
+
 .more-link {
   text-decoration: none;
   color: rgb(10, 39, 78);
@@ -266,6 +268,7 @@ h4 {
   margin: 10px;
   width: 60%;
 }
+
 .image-section {
   width: 60%;
 }

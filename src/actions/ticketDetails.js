@@ -14,8 +14,6 @@ function allComments(payload) {
 }
 
 export const getComments = (ticketId) => (dispatch) => {
-
-
     request(`${baseUrl}/comments/${ticketId}`)
       .then(response => {
         const action = allComments(response.body);

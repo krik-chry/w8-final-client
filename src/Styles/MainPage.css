@@ -15,3 +15,18 @@
 .mp-events {
   text-decoration: underline;
 }
+
+.event-more-button {
+  font: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  background: #9ca6aa;
+  margin: 10px;
+}
+
+.event-more-link {
+  text-decoration: none;
+  color: rgb(10, 39, 78);
+  font-size: 18px;
+}

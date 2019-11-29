@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getEvents, createEvent } from "../../actions/events";
-import Events from './Events'
+import Events from "./Events";
 
 class EventsContainer extends Component {
   state = { name: "", description: "", logo: "", startDate: "", endDate: "" };
+
   componentDidMount() {
     this.props.getEvents();
-  }
+  };
+
   onChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
+
   onSubmit = event => {
     event.preventDefault();
     this.props.createEvent(this.state);
@@ -22,7 +25,7 @@ class EventsContainer extends Component {
       this.state.description !== "" ||
       this.state.logo !== "" ||
       this.state.startDate !== "" ||
-      this.state.endDate !== "" 
+      this.state.endDate !== ""
     ) {
       this.setState({
         name: "",
@@ -33,6 +36,7 @@ class EventsContainer extends Component {
       });
     }
   };
+  
   render() {
     return (
       <Events

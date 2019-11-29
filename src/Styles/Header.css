@@ -12,12 +12,13 @@
   top: 5px;
 }
 
-.header-img{
+.header-img {
   width: 10%;
-  top:auto;
+  top: auto;
   left: 10px;
   background: #2191c5;
 }
+
 .header-title {
   position: absolute;
   left: 180px;
@@ -25,6 +26,7 @@
   font-size: 40px;
   color: yellow;
 }
+
 .header-logged {
   position: absolute;
   display: flex;
@@ -32,6 +34,7 @@
   top: 5px;
   height: 40px;
 }
+
 .logged-in {
   font-size: 25px;
   right: 100px;

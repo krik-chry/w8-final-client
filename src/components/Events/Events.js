@@ -25,7 +25,6 @@ class Events extends Component {
       event => new Date(event.endDate) > Date.now()
     );
 
-    // Logic for displaying current events
     const indexOfLastEvent = currentPage * eventsPerPage;
     const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
     const currentEvents = events.slice(indexOfFirstEvent, indexOfLastEvent);
@@ -51,9 +50,9 @@ class Events extends Component {
               Ends on: {event.endDate.slice(0, 10)} at {event.endDate.slice(-13, -8)} UTC
             </p>
           </div>
-          <div className="event-button">
-            <button className="more-button">
-              <Link className="more-link" to={`/events/${event.id}/tickets`}>
+          <div>
+            <button className="event-more-button">
+              <Link className="event-more-link" to={`/events/${event.id}/tickets`}>
                 See this event's tickets
               </Link>
             </button>
@@ -62,7 +61,6 @@ class Events extends Component {
       );
     });
 
-    // Logic for displaying page numbers
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(events.length / eventsPerPage); i++) {
       pageNumbers.push(i);
