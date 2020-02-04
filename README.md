@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TicketSwap Clone Frontend
 
-## Available Scripts
+## Codaisseur Bootcamp Final Assignment
 
-In the project directory, you can run:
+### This is the frontend I built during the Codaisseur Final Asginment Project, a TicketSwap website simple clone. I completed the assignment, both frontend and backend in 4,5 days with 0 help.
 
-### `npm start`
+### During my evaluation, I only heard positive feedback and the teacher was pretty excited for the quality of my work.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src='./src/images/sw-height-img.jpg'>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of contents
 
-### `npm test`
+- Framework/technologies
+- Usage and Content
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Framework and technologies used
 
-### `npm run build`
+### Frontend
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- This project was created with [ReactJS](https://reactjs.org/) framework
+- Technologies : [redux](https://www.npmjs.com/package/redux), [redux-thunk](https://www.npmjs.com/package/redux-thunk), [superagent](https://www.npmjs.com/package/superagent)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For details visit the [Backend repository](https://github.com/krik-chry/w8-final-server)
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### The user can see events that have not yet finished in the main page. There is also a login/signup button for users. In order to have acess to all features, the user must be logged in.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src='./src/assets/ticketfinder1.png'/>
+<img src='./src/assets/ticketfinder2.png'/>
+<p align='center'>Main Page</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img src='./src/assets/ticketfinder5.png'/>
+<p align='center'>SignUp Page</p>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### The user can see an event's available tickets by clicking the "See this event's tickets" button, add tickets to this event, and check the risk of buying a ticket, calculated by an algorithm. The [algorithm](https://github.com/krik-chry/w8-final-client/blob/master/src/riskAlgorithm.js) is based on the assignment description :
 
-## Learn More
+- if the ticket is the only ticket of the author, add 10%
+- if the ticket price is lower than the average ticket price for that event, that's a risk
+  _ if a ticket is X% cheaper than the average price, add X% to the risk
+  _ if a ticket is X% more expensive than the average price, deduct X% from the risk, with a maximum of 10% deduction
+- if the ticket was added during business hours (9-17), deduct 10% from the risk, if not, add 10% to the risk
+- if there are >3 comments on the ticket, add 5% to the risk
+- The minimal risk is 5% (there's no such thing as no risk) and the maximum risk is 95%.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src='./src/assets/ticketfinder3.png'/>
+<p align='center'>Event Tickets & Risk</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Each ticket has a "More" button that redirects to ticket details page. In the details page, the user can read or add comments for this ticket, as long as he is logged in. Additionaly,if the user is the owner of the ticket, there is the Edit Ticket option.
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<img src='./src/assets/ticketfinder4.png'/>
+<p align='center'>Ticket Details & Comments</p>
