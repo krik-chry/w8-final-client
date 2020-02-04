@@ -2,6 +2,8 @@
 
 ## Codaisseur Bootcamp Final Assignment
 
+### Backend Repository : [https://github.com/krik-chry/w8-final-server](https://github.com/krik-chry/w8-final-server)
+
 ### This is the frontend I built during the Codaisseur Final Asginment Project, a TicketSwap website simple clone. I completed the assignment, both frontend and backend in 4,5 days with 0 help.
 
 ### During my evaluation, I only heard positive feedback and the teacher was pretty excited for the quality of my work.
@@ -33,7 +35,7 @@ For details visit the [Backend repository](https://github.com/krik-chry/w8-final
 <img src='./src/assets/ticketfinder5.png'/>
 <p align='center'>SignUp Page</p>
 
-### The user can see an event's available tickets by clicking the "See this event's tickets" button, add tickets to this event, and check the risk of buying a ticket, calculated by an algorithm. The [algorithm](https://github.com/krik-chry/w8-final-client/blob/master/src/riskAlgorithm.js) is based on the assignment description :
+### The user can see an event's available tickets by clicking the "See this event's tickets" button, add tickets to this event, and check the risk of buying a ticket, calculated by an algorithm. The [algorithm](https://github.com/krik-chry/w8-final-server/blob/master/src/riskAlgorithm.js) is based on the assignment description :
 
 - if the ticket is the only ticket of the author, add 10%
 - if the ticket price is lower than the average ticket price for that event, that's a risk
