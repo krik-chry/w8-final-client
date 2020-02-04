@@ -6,8 +6,6 @@
 
 ### During my evaluation, I only heard positive feedback and the teacher was pretty excited for the quality of my work.
 
-<img src='./src/images/sw-height-img.jpg'>
-
 ## Table of contents
 
 - Framework/technologies
